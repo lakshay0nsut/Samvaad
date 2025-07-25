@@ -48,3 +48,41 @@ Samvaad is a secure, full-stack real-time chat application that supports private
 ```bash
 git clone https://github.com/lakshay0nsut/Samvaad.git
 cd Samvaad
+```
+
+### 2. Setup backend (server/)
+```bash
+cd server
+npm install
+Create a .env file in server/ and add:
+```
+
+env
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+
+Start backend:
+```bash
+npm start
+```
+### 3. Setup frontend (client/)
+```bash
+cd ../client
+npm install
+```
+
+Create a .env.production file in client/ and add:
+```bash
+VITE_BASE_URL=https://your-backend-api-url.com
+```
+To run locally:
+```bash
+npm run dev
+```
+To build for production:
+```bash
+npm run build
+```
