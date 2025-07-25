@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoSearch, IoLogOutOutline } from "react-icons/io5";
+import { RiChatSmile2Line } from "react-icons/ri";
 import User from "./User";
 import { useDispatch, useSelector } from "react-redux";
 import { getOtherUsersThunk, logoutUserThunk } from "../../store/slice/user/user.thunk";
@@ -36,10 +37,11 @@ const UserSidebar = () => {
   return (
     <div className="w-[20%] min-w-[250px] h-screen flex flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
       {/* App Header */}
-      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <h1 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
-          GUP SHUP
-        </h1>
+      <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex items-center gap-2">
+          <RiChatSmile2Line className="text-2xl text-indigo-600 dark:text-indigo-400" />
+          <h1 className="text-xl font-bold text-gray-800 dark:text-white">Talkie</h1>
+        </div>
       </div>
 
       {/* Search Bar */}
